@@ -1,0 +1,159 @@
+.page {
+  min-height: 100vh;
+  background: transparent;
+  color: #0a0a0a;
+  padding: 20px 28px 32px;
+  font-family: "Arial Narrow", "Franklin Gothic Medium", Arial, sans-serif;
+  overflow: hidden;
+}
+
+.topRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.meta {
+  display: flex;
+  gap: 24px;
+  text-transform: uppercase;
+}
+
+.nav {
+  display: flex;
+  gap: 28px;
+  text-transform: uppercase;
+}
+
+.nav a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.name {
+  margin: 22px 0 10px;
+  font-family: Impact, Haettenschweiler, "Arial Black", sans-serif;
+  font-size: clamp(72px, 14vw, 280px);
+  line-height: 0.9;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.bottomRow {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr minmax(260px, 450px) 1fr;
+  align-items: center;
+  gap: 24px;
+}
+
+.sideWord {
+  font-family: Impact, Haettenschweiler, "Arial Black", sans-serif;
+  font-size: clamp(48px, 6vw, 108px);
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.cardWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cardMeta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.card {
+  border: 1px solid #222;
+  background: #f1f1ee;
+}
+
+.cardHead {
+  height: 18px;
+  font-size: 9px;
+  border-bottom: 1px solid #222;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: clip;
+  padding: 3px 6px;
+}
+
+.cardMain {
+  min-height: 210px;
+  display: grid;
+  grid-template-columns: 1fr 120px;
+  background: #070707;
+  color: #f4f4f4;
+  padding: 18px 14px;
+  gap: 10px;
+  align-items: center;
+}
+
+.title {
+  font-size: clamp(52px, 8vw, 88px);
+  line-height: 0.84;
+  font-family: "Arial Narrow", "Franklin Gothic Medium", Arial, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.accent {
+  width: 72px;
+  height: 142px;
+  margin-left: auto;
+  border-radius: 28px 28px 12px 12px;
+  background:
+    linear-gradient(180deg, #fde0a3 0%, #f6ad38 54%, #3d2207 100%);
+  transform: rotate(22deg);
+  box-shadow: -8px 10px 22px rgba(0, 0, 0, 0.35);
+}
+
+.cardFoot {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  border-top: 1px solid #222;
+  font-size: 14px;
+}
+
+.contact,
+.tags {
+  padding: 10px;
+}
+
+.contact {
+  border-right: 1px solid #222;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.tags {
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.scroll {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+@media (max-width: 1024px) {
+  .bottomRow {
+    grid-template-columns: 1fr;
+  }
+
+  .sideWord {
+    display: none;
+  }
+}
