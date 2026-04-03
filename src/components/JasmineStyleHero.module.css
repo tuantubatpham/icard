@@ -1,10 +1,14 @@
 .page {
   min-height: 100vh;
   background: transparent;
-  color: #0a0a0a;
+  color: #ffffff;
   padding: 20px 28px 32px;
   font-family: "Arial Narrow", "Franklin Gothic Medium", Arial, sans-serif;
   overflow: hidden;
+}
+
+.page * {
+  color: #ffffff;
 }
 
 .topRow {
@@ -112,7 +116,7 @@
   border-radius: 28px 28px 12px 12px;
   background:
     linear-gradient(180deg, #fde0a3 0%, #f6ad38 54%, #3d2207 100%);
-  transform: rotate(22deg);
+  transform: translateY(22px) rotate(22deg);
   box-shadow: -8px 10px 22px rgba(0, 0, 0, 0.35);
 }
 

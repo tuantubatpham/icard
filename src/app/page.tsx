@@ -1,31 +1,61 @@
-import Antigravity from "@/components/Antigravity";
 import JasmineStyleHero from "@/components/JasmineStyleHero";
 import Lanyard from "@/components/Lanyard";
+import Galaxy from "@/components/Galaxy";
+import StaggeredMenu from "@/components/StaggeredMenu";
+
+const MENU_ITEMS = [
+  { label: 'Home', ariaLabel: 'Go to home page', link: '/' },
+  { label: 'About', ariaLabel: 'Learn about us', link: '/about' },
+  { label: 'Services', ariaLabel: 'View our services', link: '/services' },
+  { label: 'Contact', ariaLabel: 'Get in touch', link: '/contact' }
+];
+
+const SOCIAL_ITEMS = [
+  { label: 'Twitter', link: 'https://twitter.com' },
+  { label: 'GitHub', link: 'https://github.com' },
+  { label: 'LinkedIn', link: 'https://linkedin.com' }
+];
+
+const MENU_COLORS = ['#B19EEF', '#5227FF'];
+
 
 export default function Home() {
   return (
-    <main className="relative h-screen w-screen overflow-hidden bg-transparent font-sans dark:bg-transparent">
-      <div className="absolute inset-0 z-10 pointer-events-auto">
-        <Antigravity
-          count={300}
-          magnetRadius={9}
-          ringRadius={7}
-          waveSpeed={0.4}
-          waveAmplitude={1}
-          particleSize={1.5}
-          lerpSpeed={0.05}
-          color="#e17fcc"
-          autoAnimate
-          particleVariance={1}
-          rotationSpeed={0}
-          depthFactor={1}
-          pulseSpeed={3}
-          particleShape="capsule"
-          fieldStrength={10}
+    <main className="relative h-dvh w-full overflow-hidden bg-transparent font-sans dark:bg-transparent">
+      <div style={{ height: '100vh', background: '#1a1a1a' }}>
+        <StaggeredMenu
+          position="right"
+          items={MENU_ITEMS}
+          socialItems={SOCIAL_ITEMS}
+          displaySocials
+          displayItemNumbering={true}
+          menuButtonColor="#ffffff"
+          openMenuButtonColor="#fff"
+          changeMenuColorOnOpen={true}
+          colors={MENU_COLORS}
+          logoUrl="/path-to-your-logo.svg"
+          accentColor="#5227FF"
         />
       </div>
 
-      <div className="absolute inset-0 z-20">
+      <div className="absolute inset-0 z-0">
+        <Galaxy
+          mouseRepulsion
+          mouseInteraction
+          density={1}
+          glowIntensity={0.3}
+          saturation={0}
+          hueShift={140}
+          twinkleIntensity={0.3}
+          rotationSpeed={0.1}
+          repulsionStrength={2}
+          autoCenterRepulsion={0}
+          starSpeed={0.5}
+          speed={1}
+        />
+      </div>
+
+      <div className="absolute inset-0 z-20 pointer-events-none">
         <JasmineStyleHero />
       </div>
 
